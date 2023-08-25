@@ -1,0 +1,26 @@
+{
+  "name": "ws-1",
+  "version": "0.1.0",
+  "description": "an IoT project in PlatformIO",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jetscholar/WS-1.git"
+  },
+  "keywords": [
+    "IoT"
+  ],
+  "author": "MXZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jetscholar/WS-1/issues"
+  },
+  "homepage": "https://github.com/jetscholar/WS-1#readme"
+}
