@@ -20,8 +20,8 @@ aREST rest = aREST();
 DHT dht(DHTPIN, DHTTYPE, 15);
 
 // WiFi parameters
-const char* ssid = "ZetaReticula";
-const char* password = "0488425378";
+const char* ssid = "Proxima";
+const char* password = "centauri";
 //Static IP address configuration
 // P connections 
 #define LISTEN_PORT           80
