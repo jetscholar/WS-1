@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
     <script defer src="js/navScript.js"></script>
-    <!-- <script src="js/forecast.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/main.css"></link>
-    <title>WeatherStation</title>
+    <title>Weather Station</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <p>This is the sidebar content.</p>
-        </div>
-    <main>
-      <%- body %>
-      <p>This is the main content area.</p>
-    </main>
-  </div>
-  <footer>
-    <p>&copy; 2023 Your Company. All rights reserved.</p>
-  </footer>
-
+    <div class="main">
+        <aside class="left">
+            Left
+        </aside>
+        <main>
+            Main
+        </main>
+        <aside class="right">
+            right
+        </aside>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+    
 </body>
 </html>

@@ -1,25 +1,26 @@
-*, *::before, *::after {
+/*
+* Color scheme: https://www.color-hex.com/color-palette/86062
+*/
+
+*{
+    margin: 5px;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-areas:
-        "header header header"
-        "sidebar main sidebar"
-        "footer footer footer";
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    height: 95vh;
+    background: #f07790;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    grid-area: header;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background: #76c9bf;
+    padding: 1em 0 1em 0;
 }
 
 nav {
@@ -31,7 +32,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #76c9bf;
     color: white;
 }
 
@@ -62,6 +63,7 @@ nav {
 }
 
 .toggle-button {
+    color: white;
     position: absolute;
     top: .75rem;
     right: 1rem;
@@ -79,55 +81,35 @@ nav {
     border-radius: 10px;
 }
 
-.container {
-    display: grid;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: 1fr 3fr;
-    gap: 20px;
-    padding: 1rem;
+.main {
+    display: flex;
+    flex: 1;
 }
 
-.sidebar {
-    grid-area: sidebar;
-    background-color: #f0f0f0;
-    padding: 1rem;
+.left {
+    background: #f8ad49;
+    padding: 1em 0 1em 0; 
+    flex: 1 1 10px; 
 }
 
 main {
-    grid-area: main;
-    background-color: #fff;
-    padding: 1rem;
+    background: #76c9bf;
+    padding: 1em 0 1em 0;  
+    flex: 5 5 100px;
+}
+
+.right {
+    background: #f8ad49;
+    padding: 1em 0 1em 0; 
+    flex: 1 1 10px; 
 }
 
 footer {
-    grid-area: footer;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background: #d976a4;
+    padding: 1em 0 1em 0;
 }
 
-@media (max-width: 768px) {
-
-body {
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        "sidebar sidebar sidebar"
-        "footer footer footer";
-    grid-template-columns: 1fr;
-    }
-    
-    .container {
-    grid-template-areas:
-        "main"
-        "sidebar";
-    }
-    
-    .sidebar {
-    margin-top: 20px;
-    }
-
+@media all and (max-width: 550px) {
     .toggle-button {
         display: flex
     }
@@ -157,5 +139,12 @@ body {
 
     .navbar-links:active {
         display: flex;
+    }
+    .main {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 5em 0 5em 0;
     }
 }
